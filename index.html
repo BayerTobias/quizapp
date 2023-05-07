@@ -8,9 +8,44 @@
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
-      href="node_modules/bootstrap/dist/css/bootstrap-reboot.min.css"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
     <script src="script.js"></script>
   </head>
-  <body></body>
+  <body onload="init()">
+    <main>
+      <div class="card">
+        <img
+          src="img/quiz-g69bc3981e_1280.jpg"
+          class="card-img-top hero-img"
+          alt="quiz-img"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p id="question" class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li onclick="answer_1" id="answer_1" class="list-group-item">
+            An item
+          </li>
+          <li onclick="answer_1" id="answer_2" class="list-group-item">
+            A second item
+          </li>
+          <li onclick="answer_1" id="answer_3" class="list-group-item">
+            A third item
+          </li>
+          <li onclick="answer_1" id="answer_4" class="list-group-item">
+            A third item
+          </li>
+        </ul>
+        <div class="question-card-footer">
+          <span><b>1</b> von <b id="max_question">20</b> Fragen</span>
+          <button type="button" class="btn btn-primary">Nächste Frage</button>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
