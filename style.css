@@ -24,3 +24,8 @@ main {
   background-color: rgba(0, 0, 0, 0.05);
   cursor: pointer;
 }
+
+.bg-success,
+.bg-danger {
+  color: white !important;
+}
