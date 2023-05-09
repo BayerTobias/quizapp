@@ -1,5 +1,5 @@
 main {
-  height: 100vh;
+  height: calc(100vh - 47px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,23 +9,10 @@ main {
   width: 100%;
 }
 
-.card {
-  width: 60%;
-}
-
-.question-card-footer {
+.container-fluid {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 16px;
-}
-
-.list-group-item:hover {
   background-color: rgba(0, 0, 0, 0.05);
-  cursor: pointer;
-}
-
-.bg-success,
-.bg-danger {
-  color: white !important;
+  padding: 8px;
 }
