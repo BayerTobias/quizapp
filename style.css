@@ -6,10 +6,11 @@ main {
 }
 
 .hero-img {
-  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
 }
 
-.container-fluid {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,7 +20,7 @@ main {
 
 .main-container {
   display: flex;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   padding: 0 !important;
   overflow: hidden;
@@ -32,6 +33,17 @@ main {
   padding: 16px;
   background-color: gray;
   margin-right: 16px;
+  min-height: 650px;
+  width: 180px;
+}
+
+.nav-link {
+  color: white !important;
+  position: relative;
+}
+
+.nav-link:hover {
+  border-left: 2px solid white;
 }
 
 .nav-box-left {
@@ -41,7 +53,13 @@ main {
 .main-question-container {
   background-image: url(img/brainbg.jpg);
   background-position: center;
-  padding: 16px;
+  padding: 16px !important;
+  text-align: center;
+}
+
+.welcome-page {
+  padding: 16px !important;
+  text-align: center;
 }
 
 .question-card-footer {
@@ -50,4 +68,26 @@ main {
   align-items: center;
   border-top: 1px solid rgba(0, 0, 0, 0.2);
   padding-top: 16px;
+}
+
+.question-card {
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .main-container {
+    max-width: 800px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .dropdown-toggle {
+    display: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .left-navbar {
+    display: none !important;
+  }
 }
