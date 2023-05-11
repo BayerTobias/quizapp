@@ -74,6 +74,10 @@ main {
   width: 100%;
 }
 
+.progress {
+  border-radius: 0 !important;
+}
+
 @media (min-width: 992px) {
   .main-container {
     max-width: 800px !important;
