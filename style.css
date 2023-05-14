@@ -80,6 +80,11 @@ main {
 
 .answer-card {
   overflow: hidden;
+  cursor: pointer;
+}
+
+.answer-card:hover {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .pointer-none {

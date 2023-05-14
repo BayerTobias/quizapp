@@ -89,7 +89,7 @@ function resetAnswerButtons() {
 }
 
 function renderProgressBar() {
-  let percent = (currentQuestion + 1) / category.length;
+  let percent = currentQuestion / category.length;
   percent = Math.round(percent * 100);
   document.getElementById("progress-bar").innerHTML = `${percent} %`;
   document.getElementById("progress-bar").style = `width: ${percent}%`;
@@ -108,6 +108,8 @@ function chooseCategory(categorySelection) {
   rightAnswers = 0;
   category = questions[0][categorySelection];
   question = category[currentQuestion];
+  checkAndResetAnswerLock();
+  resetAnswerButtons();
   document.getElementById("quiz-body").style = "";
   document.getElementById("welcome-page").style = "display: none;";
   document.getElementById("end-screen").style = "display: none;";
@@ -119,5 +121,12 @@ function toggleAnswerLock() {
   for (let i = 0; i < cards.length; i++) {
     const card = cards[i];
     card.classList.toggle("pointer-none");
+  }
+}
+
+function checkAndResetAnswerLock() {
+  let card = document.querySelector(".answer-card");
+  if (card.classList.contains("pointer-none")) {
+    toggleAnswerLock();
   }
 }
